@@ -10,14 +10,14 @@ if (sessionStorage.getItem("isAuth") === null || sessionStorage.getItem("isAuth"
 }
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDuBvUNIV-BYvchsUty4spFt_wiXfTOvrw",
-    authDomain: "proyecto-web---thompson.firebaseapp.com",
-    databaseURL: "https://proyecto-web---thompson-default-rtdb.firebaseio.com/",
-    projectId: "proyecto-web---thompson",
-    storageBucket: "proyecto-web---thompson.appspot.com",
-    messagingSenderId: "682750582027",
-    appId: "1:682750582027:web:eda07890e30d60a065960e",
-    measurementId: "G-6DVLX3T6FC"
+    apiKey: "AIzaSyCbwwbFc_mE14zR0ZtqlIgbJvMl7pKneQw",
+    authDomain: "sitioweb-tiendaonline.firebaseapp.com",
+    databaseURL: "https://sitioweb-tiendaonline-default-rtdb.firebaseio.com",
+    projectId: "sitioweb-tiendaonline",
+    storageBucket: "sitioweb-tiendaonline.appspot.com",
+    messagingSenderId: "476451669679",
+    appId: "1:476451669679:web:f62147a8a95f1e3baab65a",
+    measurementId: "G-211ZK808CS"
 };
 
  // Initialize Firebase
@@ -352,11 +352,11 @@ onAuthStateChanged(auth, async user => {
     console.log(window.location.pathname);
     if (user) {
         if (window.location.pathname.includes("login")) {
-            window.location.href = "/html/administrador.html";
+            window.location.href = "/administrador.html";
         }
     } else {
         if (window.location.pathname.includes("administrador")) {
-            window.location.href = "/html/login.html";
+            window.location.href = "/login.html";
         }
     }
 });

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.3.0-web/css/all.css">
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+
+    <div id="nav-bg">
+        <nav class="navegacion contenedor-nav" style="justify-content: space-between;">
+            <a href="#">Neto Tech - Administrador</a>
+            <a id="btnCerrarSesion">Cerrar Sesión</a>
+        </nav>
+    </div>
+
+    <section id="hero">
+        <div id="contenido-hero">
+            <h2>NetoTech</h2>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <circle cx="12" cy="11" r="3" />
+            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+            </svg>
+            <p style="font-size: 1.2em;">Mazatlán, Sinaloa</p>
+        </div>
+
+    </section>
+    
+    <section id="contenido-administrador">
+        <h3>Administrador</h3>
+
+        <form id="formulario-administrador">
+            <fieldset>
+                <div class="campoAdmin">
+                    <label>Código:</label>
+                    <br>
+                    <input type="number" placeholder="Código" id="codigo" min="1" step="1">
+                </div>
+
+                <div class="campoAdmin">
+                    <label>Precio:</label>
+                    <br>
+                    <input type="number" placeholder="Introduzca un precio" id="precio">
+                </div>
+
+                <div class="campoAdmin">
+                    <label>Nombre del Producto:</label>
+                    <br>
+                    <input type="text" placeholder="Introduzca el nombre del producto" id="nombre">
+                </div>
+
+                <div class="campoAdmin">
+                    <label>Descripcion:</label>
+                    <br>
+                    <textarea class="input-text" id="descripcion"></textarea>
+                </div>
+
+                <div class="campoAdmin">
+                    <label>URL de imagen:</label>
+                    <br>
+                    <input type="text" id="url" readonly>
+                </div>
+
+                <div class="campoAdmin">
+                    <label>Cantidad:</label>
+                    <br>
+                    <input type="number" placeholder="Introduzca un precio" id="cantidad">
+                </div>
+
+                <div class="campoAdmin">
+                    <label>Estatus:</label>
+                    <br>
+                    <select id="estatus" class="form-select">
+                        <option value="" selected disabled>Selecciona una opción</option>
+                        <option value="0">Inactivo</option>
+                        <option value="1">Activo</option>
+                    </select>
+                </div>
+
+                <div class="campoAdmin">
+                    <label>Categoria:</label>
+                    <br>
+                    <select id="categoria" class="form-select">
+                        <option value="0" selected disabled>Selecciona una opción</option>
+                        <option value="1">Tarjetas Graficas</option>
+                        <option value="2">Gabinetes</option>
+                        <option value="3">Procesadores</option>
+                        <option value="4">Tarjetas Madre</option>
+                        <option value="5">Memorias RAM</option>
+                    </select>
+                </div>
+
+                <div class="campoAdmin">
+                    <div class="imagenPreview" id="imagenContainer">
+                        <img id="imgPreview" src="#" height="200" class="none" alt="Imagen introducida" />
+                    </div>
+                    <label>Imagen:</label>
+                    <div class="input-image">
+                        <label for="imagen" class="input-file">
+                            <input type="file" class="none" name="imagen" id="imagen" accept="image/*" />
+                            Seleccione un archivo
+                        </label>
+                        <div class="input-name" id="imagenName">No se han seleccionado archivos</div>
+                    </div>
+        
+                </div>
+
+            </fieldset>
+
+            <div id="botones">
+                <button id="btnAgregar">Agregar</button>
+                <button id="btnConsultar">Consultar</button>
+                <button id="btnModificar">Modificar</button>
+                <button id="btnDeshabilitar">Deshabilitar</button>
+                <button id="btnMostrar">Mostrar Registros</button>
+                <button type="reset" id="btnLimpiar">Limpiar</button>
+            </div>
+
+        </form>
+
+        <table id="productos" class="table" border="1">
+
+        </table>
+
+    </section>
+
+    <!-- <footer id="pie">
+        <p>© 2023, Ernesto Galindo. Todos los derechos Reservados</p>
+    </footer> -->
+
+    <footer>
+
+        <div class="footer-container">
+    
+            <div class="footer-row">
+    
+                <div class="footer-col footer-col-1">
+                    <p style="color: #ffffff; font-size: 2rem; font-weight: bold; margin-top: 0; margin-bottom: 10px;">NetoTech</p>
+                    <p><i class="fa-solid fa-location-dot"></i> &nbsp&nbspCalle de los Doblones 16304 Villas del Rey</p>
+                    <p><i class="fa-solid fa-phone"></i> &nbsp&nbsp(669) 2 68 77 89</p>
+                    <p><i class="fa-regular fa-envelope"></i> &nbsp&nbsp2020030184@upsin.edu.mx</p>
+                </div>
+    
+                <div class="footer-col footer-col-2">
+                    <p style="color: #ffffff; display: block; font-size: 2rem; font-weight: bold; margin-top: 0; margin-bottom: 10px;">Redes sociales</p>
+                    <ul class="social-icons">
+                        <li> <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook"> </i> </a> </li>
+                        <li> <a href="https://twitter.com/" target="_blank"> <i class="fa-brands fa-twitter"> </i> </a> </li>
+                        <li> <a href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"> </i> </a> </li>
+                        <li> <a href="https://plus.google.com/" target="_blank"> <i class="fa-brands fa-google"> </i> </a> </li>
+                    </ul>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+      </footer>
+    
+    <script src="/js/app.js" type="module"></script>
+    <script src="/js/login.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>
